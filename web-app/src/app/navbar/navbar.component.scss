@@ -1,0 +1,17 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+.bottom-navbar {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.center-button .mat-icon {
+  height: 64px;
+}
