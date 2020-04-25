@@ -3,8 +3,8 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$m2c-app-primary: mat-palette($mat-light-blue, 900);
-$m2c-app-accent:  mat-palette($mat-amber);
+$m2c-app-primary: mat-palette($mat-green, 700);
+$m2c-app-accent:  mat-palette($mat-orange, 800);
 
 // The warn palette is optional (defaults to red).
 $m2c-app-warn: mat-palette($mat-red);
@@ -15,3 +15,4 @@ $m2c-app-theme: mat-light-theme($m2c-app-primary, $m2c-app-accent, $m2c-app-warn
 $primary: mat-color($m2c-app-primary);
 $accent: mat-color($m2c-app-accent);
 $warn: mat-color($m2c-app-warn);
+$bg: mat-color(mat-palette($mat-green, 100));

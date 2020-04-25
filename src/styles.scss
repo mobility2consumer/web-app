@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+@import "src/variables";
 
-html, body { height: 100%;  background-color: #fafafa}
+html, body { height: 100%;  background-color: $bg}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .container {
@@ -18,4 +19,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .main-topic {
   margin: 76px auto 80px auto;
+}
+
+.text-container {
+  margin: 16px;
+}
+h1 {
+  font-family: 'Montserrat', sans-serif !important;
 }
