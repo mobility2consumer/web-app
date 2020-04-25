@@ -4,45 +4,31 @@
   <img style="height: 48px;margin: auto 12px;" src="assets/plain-logo.svg">
   Mobility2Consumer
   <span class="spacer"></span>
-  <span [fxHide.lt-md]="true">
-    <button mat-flat-button color="primary">
-    <mat-icon>home</mat-icon>
-      Home
-  </button>
-  <button mat-flat-button color="primary">
-    <mat-icon>directions_bus</mat-icon>
-    Journeys
-  </button>
-  <button mat-flat-button color="primary">
-    <mat-icon>store</mat-icon>
-    Orders
-  </button>
-  <button mat-flat-button color="primary">
-    <mat-icon>account_circle</mat-icon>
-    Profile
+  <span [fxHide.lt-md]="true" *ngIf="(menu | async) as menus">
+    <button *ngFor="let m of menus" mat-flat-button color="primary" [routerLink]="[m.link]"
+            [routerLinkActive]="['mat-accent']"
+            [routerLinkActiveOptions]="{exact: true}">
+    <mat-icon>{{m.icon}}</mat-icon>
+      {{m.text}}
   </button>
   </span>
 </mat-toolbar>
 
-<button class="main-button" mat-fab [fxHide.lt-md]="true">
+<button class="main-button" mat-fab [fxHide.lt-md]="true" *ngIf="(add | async)">
   <mat-icon>add</mat-icon>
 </button>
-<mat-toolbar color="primary" [fxHide.gt-sm]="true" class="bottom-navbar">
-  <button class="main-button-mobile" ngClass.gt-sm="main-button" mat-fab>
-    <mat-icon>add</mat-icon>
-  </button>
+<ng-container *ngIf="(menu | async) as menus">
 
-  <button mat-flat-button color="primary" style="flex:1">
-    <mat-icon>home</mat-icon>
-  </button>
-  <button mat-flat-button color="primary" style="flex:1">
-    <mat-icon>directions_bus</mat-icon>
-  </button>
-  <div class="spacer"></div>
-  <button mat-flat-button color="primary" style="flex:1">
-    <mat-icon>store</mat-icon>
-  </button>
-  <button mat-flat-button color="primary" style="flex:1">
-    <mat-icon>account_circle</mat-icon>
-  </button>
-</mat-toolbar>
+  <mat-toolbar color="primary" [fxHide.gt-sm]="true" class="bottom-navbar" *ngIf="menus.length > 0">
+    <button class="main-button-mobile" ngClass.gt-sm="main-button" mat-fab *ngIf="(add | async)">
+      <mat-icon>add</mat-icon>
+    </button>
+
+    <button *ngFor="let m of menus; let i = index" mat-flat-button color="primary" [routerLink]="[m.link]"
+            [routerLinkActive]="['mat-accent']"
+            [routerLinkActiveOptions]="{exact: true}" style="flex:1">
+      <mat-icon>{{m.icon}}</mat-icon>
+    </button>
+  </mat-toolbar>
+</ng-container>
+

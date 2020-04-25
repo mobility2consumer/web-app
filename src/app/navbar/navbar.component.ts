@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {NavbarService} from "./navbar.service";
+import {Observable} from "rxjs";
+import {MenuEntryDto} from "./dtos/menu-entry.dto";
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  menu : Observable<MenuEntryDto[]>;
+  add: Observable<boolean>;
+  constructor(private navbarService: NavbarService) { }
 
   ngOnInit(): void {
+    this.menu = this.navbarService.getMenus();
+    this.add = this.navbarService.getAdd();
   }
 
 }
