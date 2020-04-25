@@ -31,6 +31,10 @@ import {TransportToMeComponent} from "./user/transport-to-me/transport-to-me.com
 import {RentComponent} from "./user/rent/rent.component";
 import {MatRadioModule} from "@angular/material/radio";
 import { ProfileComponent } from './user/profile/profile.component';
+import {PlanRoutingModule} from "./plan/plan-routing.module";
+import {CallRoutingModule} from "./call/call-routing.module";
+import {StoreRoutingModule} from "./store/store-routing.module";
+import {StoreManagementComponent} from "./store/store-management.component";
 
 @NgModule({
   declarations: [
@@ -48,6 +52,7 @@ import { ProfileComponent } from './user/profile/profile.component';
     TransportToMeComponent,
     RentComponent,
     ProfileComponent,
+    StoreManagementComponent
   ],
   imports: [
     FlexLayoutModule,
@@ -68,6 +73,9 @@ import { ProfileComponent } from './user/profile/profile.component';
     MatNativeDateModule,
     MatRadioModule,
     FormsModule,
+    PlanRoutingModule,
+    CallRoutingModule,
+    StoreRoutingModule
   ],
   providers: [
     MatDatepickerModule
