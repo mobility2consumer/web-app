@@ -9,6 +9,7 @@
 }
 
 .answers {
+  flex-wrap: wrap;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -20,10 +21,13 @@
 }
 
 .answer {
+  min-width: 100px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 1;
+  margin: 24px 24px
 }
 
 .answer:hover {

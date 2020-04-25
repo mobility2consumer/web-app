@@ -11,17 +11,24 @@ export class HomeService {
     {
       image: 'assets/icons/user.svg',
       title: 'User',
-      subtitle: 'Order products and journeys',
+      subtitle: 'Discover affiliated shops and book journeys',
       color: '#4CAF50',
       link: '/user'
     },
     {
       image: 'assets/icons/call.svg',
       title: 'Receptionist',
-      subtitle: 'Order products and journeys for a user calling',
+      subtitle: 'Book journeys for a user calling',
       color: '#00BCD4',
       link: '/call'
 
+    },
+    {
+      image: 'assets/icons/store.svg',
+      title: 'Store',
+      subtitle: 'Request delivery',
+      color: '#F44336',
+      link: '/store'
     },
     {
       image: 'assets/icons/bus.svg',
@@ -30,6 +37,7 @@ export class HomeService {
       color: '#FF9800',
       link: '/plan'
     },
+
   ]
 
   constructor() {
