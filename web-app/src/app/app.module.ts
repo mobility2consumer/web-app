@@ -8,20 +8,22 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import { NavbarComponent } from './navbar/navbar.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent
   ],
-  imports: [
-    FlexLayoutModule,
-    BrowserModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatToolbarModule,
-    MatIconModule
-  ],
+    imports: [
+        FlexLayoutModule,
+        BrowserModule,
+        BrowserAnimationsModule,
+        MatButtonModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatCardModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
