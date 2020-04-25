@@ -12,13 +12,21 @@ import {MatCardModule} from "@angular/material/card";
 import {AppRoutingModule} from "./app-routing.module";
 import { HomeComponent } from './home/home.component';
 import { HeaderImageComponent } from './home/header-image/header-image.component';
+import { ButtonChoiceComponent } from './home/button-choice/button-choice.component';
+import { UserComponent } from './user/user.component';
+import { CallComponent } from './call/call.component';
+import { PlanComponent } from './plan/plan.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    HeaderImageComponent
+    HeaderImageComponent,
+    ButtonChoiceComponent,
+    UserComponent,
+    CallComponent,
+    PlanComponent
   ],
   imports: [
     FlexLayoutModule,

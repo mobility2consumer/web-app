@@ -1,0 +1,15 @@
+<mat-card class="main-content choice-card-mobile" ngClass.gt-sm="choice-card">
+  <div class="text-section">
+    <div class="question">{{question}}</div>
+  </div>
+  <div class="answers">
+    <div class="answer" *ngFor="let a of answers" [routerLink]="a.link">
+      <div class="icon-mobile" ngClass.gt-sm="icon" [style.background-color]="a.color">
+        <img [src]="a.image" [alt]="a.title + ' image'">
+      </div>
+      <div class="title-mobile" ngClass.gt-sm="title" [style.color]="a.color">{{a.title}}</div>
+      <div class="subtitle-mobile" ngClass.gt-sm="subtitle">{{a.subtitle}}</div>
+    </div>
+
+  </div>
+</mat-card>

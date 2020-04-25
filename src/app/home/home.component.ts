@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {AnswerDto} from "./dtos/answer.dto";
+import {Observable} from "rxjs";
+import {HomeService} from "./home.service";
 
 @Component({
   selector: 'app-home',
@@ -7,10 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   image = 'assets/img/hand.jpg';
+  answers: Observable<AnswerDto[]>;
 
-  constructor() { }
+  constructor(private homeService: HomeService) { }
 
   ngOnInit(): void {
+    this.answers = this.homeService.getAnswers();
   }
 
 }
