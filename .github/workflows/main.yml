@@ -8,6 +8,8 @@ on:
 
 jobs:
   firebase-deploy:
+    env:
+      working-directory: ./web-app
 
     runs-on: ubuntu-latest
 
