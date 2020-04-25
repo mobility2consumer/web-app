@@ -54,3 +54,9 @@ h1 {
 body {
   -ms-overflow-style:none;
 }
+
+.text-container h1 {
+  font-weight: bold;
+  font-size: 32px;
+  color: $primary;
+}

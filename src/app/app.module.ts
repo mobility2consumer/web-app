@@ -10,15 +10,27 @@ import {NavbarComponent} from './navbar/navbar.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatCardModule} from "@angular/material/card";
 import {AppRoutingModule} from "./app-routing.module";
-import { HomeComponent } from './home/home.component';
-import { HeaderImageComponent } from './home/header-image/header-image.component';
-import { ButtonChoiceComponent } from './home/button-choice/button-choice.component';
-import { UserComponent } from './user/user.component';
-import { CallComponent } from './call/call.component';
-import { PlanComponent } from './plan/plan.component';
-import { StoresComponent } from './user/stores/stores.component';
+import {HomeComponent} from './home/home.component';
+import {HeaderImageComponent} from './home/header-image/header-image.component';
+import {ButtonChoiceComponent} from './home/button-choice/button-choice.component';
+import {UserComponent} from './user/user.component';
+import {CallComponent} from './call/call.component';
+import {PlanComponent} from './plan/plan.component';
+import {StoresComponent} from './user/stores/stores.component';
 import {UserRoutingModule} from "./user/user-routing.module";
 import {MatTooltipModule} from "@angular/material/tooltip";
+import {TransportComponent} from './user/transport/transport.component';
+import {MatStepperModule} from "@angular/material/stepper";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {MatInputModule} from "@angular/material/input";
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatNativeDateModule} from "@angular/material/core";
+import { OrdersComponent } from './user/orders/orders.component';
+import {TransportToMeComponent} from "./user/transport-to-me/transport-to-me.component";
+import {RentComponent} from "./user/rent/rent.component";
+import {MatRadioModule} from "@angular/material/radio";
+import { ProfileComponent } from './user/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +42,12 @@ import {MatTooltipModule} from "@angular/material/tooltip";
     UserComponent,
     CallComponent,
     PlanComponent,
-    StoresComponent
+    StoresComponent,
+    TransportComponent,
+    OrdersComponent,
+    TransportToMeComponent,
+    RentComponent,
+    ProfileComponent,
   ],
   imports: [
     FlexLayoutModule,
@@ -42,9 +59,19 @@ import {MatTooltipModule} from "@angular/material/tooltip";
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatStepperModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatRadioModule,
+    FormsModule,
   ],
-  providers: [],
+  providers: [
+    MatDatepickerModule
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

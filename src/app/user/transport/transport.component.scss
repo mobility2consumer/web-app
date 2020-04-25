@@ -1,0 +1,25 @@
+.mat-stepper-vertical {
+  margin-top: 8px;
+}
+
+.mat-form-field {
+  margin-top: 16px;
+}
+
+.form-row {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+}
+.form-row mat-form-field {
+  max-width: 300px;
+  width: 100%;
+  margin: auto 8px;
+}
+
+.map {
+  min-height: 300px;
+}

@@ -13,8 +13,8 @@ export class NavbarService {
   }
   journeys = {
     icon: 'directions_bus',
-    text: 'Journeys',
-    link: '/journeys'
+    text: 'Orders',
+    link: '/user/orders'
   }
   add = {
     icon: 'add',
@@ -34,7 +34,7 @@ export class NavbarService {
   profile = {
     icon: 'account_circle',
     text: 'Profile',
-    link: '/profile'
+    link: '/user/profile'
   }
   space = {
     icon: '',

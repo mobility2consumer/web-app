@@ -13,14 +13,14 @@ export class UserService {
       title: 'Transport me!',
       subtitle: 'Transport me wherever I want!',
       color: '#4CAF50',
-      link: '/user'
+      link: '/user/request-transport'
     },
     {
       image: 'assets/icons/bus.svg',
       title: 'Transport to me!',
       subtitle: 'Transport some people for me!',
       color: '#00BCD4',
-      link: '/call'
+      link: '/user/request-transport-to-me'
 
     },
     {
@@ -28,7 +28,7 @@ export class UserService {
       title: 'Rent!',
       subtitle: 'Rent a vehicle for a period of time!',
       color: '#F44336',
-      link: '/store'
+      link: '/user/rent'
     }
   ]
 
