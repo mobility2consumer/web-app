@@ -29,8 +29,6 @@ export class NavbarService {
     }
   ]
 
-  addEnable = true;
-
   navbarSubject = new BehaviorSubject([]);
   navbarObs = this.navbarSubject.asObservable();
   addSubject = new BehaviorSubject(false);
