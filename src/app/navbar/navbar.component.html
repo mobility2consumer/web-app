@@ -19,11 +19,12 @@
   </span>
 </mat-toolbar>
 
-<button class="main-button-mobile" ngClass.gt-sm="main-button" mat-fab *ngIf="(add | async)"
-        [routerLink]="['tel:+390123456789']"
-        [matTooltip]="'Contact us!'">
-  <mat-icon>call</mat-icon>
-</button>
+<a href="tel:+390123456789">
+  <button class="main-button-mobile" ngClass.gt-sm="main-button" mat-fab *ngIf="(add | async)"
+          [matTooltip]="'Contact us!'">
+    <mat-icon>call</mat-icon>
+  </button>
+</a>
 <ng-container *ngIf="(menu | async) as menus">
 
   <mat-toolbar color="primary" [fxHide.gt-sm]="true" class="bottom-navbar" *ngIf="menus.length > 0">
