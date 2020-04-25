@@ -11,12 +11,14 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatCardModule} from "@angular/material/card";
 import {AppRoutingModule} from "./app-routing.module";
 import { HomeComponent } from './home/home.component';
+import { HeaderImageComponent } from './home/header-image/header-image.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    HeaderImageComponent
   ],
   imports: [
     FlexLayoutModule,
