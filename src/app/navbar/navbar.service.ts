@@ -18,8 +18,8 @@ export class NavbarService {
   }
   store = {
     icon: 'store',
-    text: 'Orders',
-    link: '/orders'
+    text: 'Affiliated Stores',
+    link: '/user/store'
   }
   profile = {
     icon: 'account_circle',
@@ -56,7 +56,7 @@ export class NavbarService {
         this.addSubject.next(false);
         break;
       case 'user':
-        menus.push(this.home, this.journeys, this.space,this.store, this.profile)
+        menus.push(this.home, this.journeys, this.space, this.store, this.profile)
         console.log(menus)
         this.navbarSubject.next(menus)
         this.addSubject.next(true);

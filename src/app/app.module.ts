@@ -16,6 +16,8 @@ import { ButtonChoiceComponent } from './home/button-choice/button-choice.compon
 import { UserComponent } from './user/user.component';
 import { CallComponent } from './call/call.component';
 import { PlanComponent } from './plan/plan.component';
+import { StoresComponent } from './user/stores/stores.component';
+import {UserRoutingModule} from "./user/user-routing.module";
 
 @NgModule({
   declarations: [
@@ -26,11 +28,13 @@ import { PlanComponent } from './plan/plan.component';
     ButtonChoiceComponent,
     UserComponent,
     CallComponent,
-    PlanComponent
+    PlanComponent,
+    StoresComponent
   ],
   imports: [
     FlexLayoutModule,
     AppRoutingModule,
+    UserRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,

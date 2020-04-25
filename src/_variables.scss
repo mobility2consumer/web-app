@@ -15,4 +15,4 @@ $m2c-app-theme: mat-light-theme($m2c-app-primary, $m2c-app-accent, $m2c-app-warn
 $primary: mat-color($m2c-app-primary);
 $accent: mat-color($m2c-app-accent);
 $warn: mat-color($m2c-app-warn);
-$bg: mat-color(mat-palette($mat-green, 100));
+$bg: mat-color(mat-palette($mat-green, 50));

@@ -3,6 +3,9 @@
     <h1>Welcome back, User!</h1>
   </div>
 
-    <app-button-choice *ngIf="(this.choice | async) as answers" [answers]="answers"
-                       [question]="'Select the product you want:'"></app-button-choice>
+  <app-button-choice *ngIf="(this.choice | async) as answers" [answers]="answers"
+                     [question]="'Select the product you want:'"></app-button-choice>
+  <div ngClass.lt-md="blank-space"></div>
+
 </div>
+

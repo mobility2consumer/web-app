@@ -7,7 +7,6 @@ import {PlanComponent} from "./plan/plan.component"; // CLI imports router
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'user', component: UserComponent},
   {path: 'call', component: CallComponent},
   {path: 'plan', component: PlanComponent},
   // { path: 'second-component', component: SecondComponent },
