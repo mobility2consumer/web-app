@@ -1,3 +1,6 @@
 <app-navbar></app-navbar>
 
 <router-outlet></router-outlet>
+<main [@fadeAnimation]="getRouterOutletState(o)" ngClass.lt-sm="blank-space">
+  <router-outlet #o="outlet" class="router-css"></router-outlet>
+</main>

@@ -5,12 +5,14 @@
   Mobility2Consumer
   <span class="spacer"></span>
   <span [fxHide.lt-md]="true" *ngIf="(menu | async) as menus">
-    <button *ngFor="let m of menus" mat-flat-button color="primary" [routerLink]="[m.link]"
+        <ng-container *ngFor="let m of menus">
+    <button *ngIf="m.icon !== ''" mat-flat-button color="primary" [routerLink]="[m.link]"
             [routerLinkActive]="['mat-accent']"
             [routerLinkActiveOptions]="{exact: true}">
     <mat-icon>{{m.icon}}</mat-icon>
       {{m.text}}
   </button>
+        </ng-container>
   </span>
 </mat-toolbar>
 
@@ -23,12 +25,14 @@
     <button class="main-button-mobile" ngClass.gt-sm="main-button" mat-fab *ngIf="(add | async)">
       <mat-icon>add</mat-icon>
     </button>
-
-    <button *ngFor="let m of menus; let i = index" mat-flat-button color="primary" [routerLink]="[m.link]"
-            [routerLinkActive]="['mat-accent']"
-            [routerLinkActiveOptions]="{exact: true}" style="flex:1">
-      <mat-icon>{{m.icon}}</mat-icon>
-    </button>
+    <ng-container *ngFor="let m of menus">
+      <div class="spacer" *ngIf="m.icon === ''"></div>
+      <button *ngIf="m.icon !== ''" mat-flat-button color="primary" [routerLink]="[m.link]"
+              [routerLinkActive]="['mat-accent']"
+              [routerLinkActiveOptions]="{exact: true}" style="flex:1">
+        <mat-icon>{{m.icon}}</mat-icon>
+      </button>
+    </ng-container>
   </mat-toolbar>
 </ng-container>
 
