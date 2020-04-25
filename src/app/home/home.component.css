@@ -1,0 +1,14 @@
+.title-logo {
+  height: 32px;
+  width: 32px;
+}
+
+.header-img {
+  height: 200px;
+
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
