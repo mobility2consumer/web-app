@@ -7,11 +7,30 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
   bottom: 0;
   right: 0;
   left: 0;
 }
 
+.bottom-navbar button {
+  margin: 0;
+}
+
 .center-button .mat-icon {
   height: 64px;
 }
+
+.main-button-mobile {
+  position: absolute;
+  bottom: 20px;
+  margin: auto;
+}
+
+.main-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 32px;
+}
+
