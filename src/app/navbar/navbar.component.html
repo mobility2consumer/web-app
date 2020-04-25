@@ -1,8 +1,11 @@
 <mat-toolbar color="primary" class="top-navbar">
   <span class="spacer" [fxHide.gt-sm]="true"></span>
+  <div class="logo-container">
 
-  <img style="height: 48px;margin: auto 12px;" src="assets/plain-logo.svg">
-  <h1>Mobility2Consumer</h1>
+    <img style="height: 48px;margin: auto 12px auto auto" src="assets/plain-logo.svg">
+
+    <h1>Mobility2Consumer</h1>
+  </div>
   <span class="spacer"></span>
   <span [fxHide.lt-md]="true" *ngIf="(menu | async) as menus">
         <ng-container *ngFor="let m of menus">
@@ -16,15 +19,14 @@
   </span>
 </mat-toolbar>
 
-<button class="main-button" mat-fab [fxHide.lt-md]="true" *ngIf="(add | async)">
-  <mat-icon>add</mat-icon>
+<button class="main-button-mobile" ngClass.gt-sm="main-button" mat-fab *ngIf="(add | async)"
+        [routerLink]="['tel:+390123456789']"
+        [matTooltip]="'Contact us!'">
+  <mat-icon>call</mat-icon>
 </button>
 <ng-container *ngIf="(menu | async) as menus">
 
   <mat-toolbar color="primary" [fxHide.gt-sm]="true" class="bottom-navbar" *ngIf="menus.length > 0">
-    <button class="main-button-mobile" ngClass.gt-sm="main-button" mat-fab *ngIf="(add | async)">
-      <mat-icon>add</mat-icon>
-    </button>
     <ng-container *ngFor="let m of menus">
       <div class="spacer" *ngIf="m.icon === ''"></div>
       <button *ngIf="m.icon !== ''" mat-flat-button color="primary" [routerLink]="[m.link]"

@@ -18,6 +18,7 @@ import { CallComponent } from './call/call.component';
 import { PlanComponent } from './plan/plan.component';
 import { StoresComponent } from './user/stores/stores.component';
 import {UserRoutingModule} from "./user/user-routing.module";
+import {MatTooltipModule} from "@angular/material/tooltip";
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import {UserRoutingModule} from "./user/user-routing.module";
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

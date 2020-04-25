@@ -14,7 +14,15 @@
   z-index: 10;
 }
 
+.bottom-navbar button {
+  height: 100%;
+
+}
+
 .top-navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   position: fixed;
   z-index: 10;
   top: 0;
@@ -37,6 +45,14 @@
 
 }
 
+.main-button-mobile {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 70px 32px;
+  z-index: 15 !important;
+}
+
 .main-button {
   position: fixed;
   bottom: 0;
@@ -45,3 +61,9 @@
   z-index: 15 !important;
 }
 
+.logo-container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center
+}

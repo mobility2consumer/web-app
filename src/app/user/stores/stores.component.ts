@@ -19,6 +19,7 @@ export class StoresComponent implements OnInit {
 
   ngOnInit(): void {
     this.navbarService.update('user');
+    this.navbarService.callSubject.next(false);
     this.stores = this.storesService.getGroceries();
     this.pharma = this.storesService.getPharma();
 

@@ -16,6 +16,16 @@ export class NavbarService {
     text: 'Journeys',
     link: '/journeys'
   }
+  add = {
+    icon: 'add',
+    text: 'Request a service',
+    link: '/user'
+  }
+  call = {
+    icon: 'call',
+    text: 'Call Us!',
+    link: 'tel:+390123456789'
+  }
   store = {
     icon: 'store',
     text: 'Affiliated Stores',
@@ -34,8 +44,8 @@ export class NavbarService {
 
   navbarSubject = new BehaviorSubject([]);
   navbarObs = this.navbarSubject.asObservable();
-  addSubject = new BehaviorSubject(false);
-  addObs = this.addSubject.asObservable();
+  callSubject = new BehaviorSubject(false);
+  callObs = this.callSubject.asObservable();
 
   constructor() {
   }
@@ -45,7 +55,7 @@ export class NavbarService {
   }
 
   getAdd(): Observable<boolean> {
-    return this.addObs;
+    return this.callObs;
   }
 
   update(id: string) {
@@ -53,13 +63,13 @@ export class NavbarService {
     switch (id) {
       case '':
         this.navbarSubject.next([])
-        this.addSubject.next(false);
+        this.callSubject.next(true);
         break;
       case 'user':
-        menus.push(this.home, this.journeys, this.space, this.store, this.profile)
+        menus.push(this.home, this.journeys, this.add, this.store, this.profile)
         console.log(menus)
         this.navbarSubject.next(menus)
-        this.addSubject.next(true);
+        this.callSubject.next(true);
         break;
     }
   }
