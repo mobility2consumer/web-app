@@ -48,6 +48,9 @@ import {SoapComponent} from "./plan/soap/soap.component";
 import {OrdersStoreComponent} from "./store/orders/orders-store.component";
 import { UserEntryComponent } from './plan/soap/user-entry/user-entry.component';
 import { ShopEntryComponent } from './plan/soap/shop-entry/shop-entry.component';
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import { SoapResultComponent } from './plan/soap-result/soap-result.component';
+import {StopEntryComponent} from "./plan/soap-result/stop-entry/stop-entry.component";
 
 @NgModule({
   declarations: [
@@ -77,7 +80,9 @@ import { ShopEntryComponent } from './plan/soap/shop-entry/shop-entry.component'
     SoapComponent,
     OrdersStoreComponent,
     UserEntryComponent,
-    ShopEntryComponent
+    ShopEntryComponent,
+    SoapResultComponent,
+    StopEntryComponent
   ],
   imports: [
     FlexLayoutModule,
@@ -102,7 +107,8 @@ import { ShopEntryComponent } from './plan/soap/shop-entry/shop-entry.component'
     CallRoutingModule,
     StoreManagementRouting,
     MatSelectModule,
-    PlanRoutingModule
+    PlanRoutingModule,
+    MatProgressSpinnerModule
   ],
   providers: [
     MatDatepickerModule

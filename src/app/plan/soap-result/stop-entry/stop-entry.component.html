@@ -1,0 +1,14 @@
+<div class="row-entry">
+  <div class="image">
+    <img width="30px" src="assets/icons/pin-color.svg">
+  </div>
+  <div class="text-section">
+    <div class="name">{{stop.address}}</div>
+    <div class="time">{{stop.time}}</div>
+    <div class="start" *ngIf="stop.peopleUp && stop.peopleUp >0"><b>People In</b>: {{stop.peopleUp}}</div>
+    <div class="start"*ngIf="stop.peopleDown && stop.peopleDown >0"><b>People Out</b>: {{stop.peopleDown}}</div>
+    <div class="start"*ngIf="stop.packageUp && stop.packageUp >0"><b>Package In</b>: {{stop.packageUp}}</div>
+    <div class="dest"*ngIf="stop.packageDown && stop.packageDown >0"><b>Package Out</b>: {{stop.packageDown}}</div>
+  </div>
+
+</div>

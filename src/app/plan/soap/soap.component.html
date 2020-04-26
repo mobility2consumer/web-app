@@ -23,8 +23,9 @@
     </div>
 
   </mat-card>
-  <button class="main-button-mobile" ngClass.gt-sm="main-button" mat-fab [matTooltip]="'Plan with SOAP!'">
+  <button *ngIf="!loading" class="main-button-mobile" ngClass.gt-sm="main-button" mat-fab [matTooltip]="'Plan with SOAP!'" (click)="startSimulation()">
     <mat-icon>play_arrow</mat-icon>
   </button>
+  <mat-spinner *ngIf="loading" diameter="60" mode="indeterminate" class="main-button-mobile" ngClass.gt-sm="main-button"></mat-spinner>
   <div ngClass.lt-md="blank-space"></div>
 </div>

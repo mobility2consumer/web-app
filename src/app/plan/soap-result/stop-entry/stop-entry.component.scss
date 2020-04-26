@@ -29,12 +29,17 @@
 .name {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 18px;
   color: $primary;
   margin-bottom: 5px;
 }
 
 .phone {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.time {
   font-weight: bold;
   font-size: 14px;
 }

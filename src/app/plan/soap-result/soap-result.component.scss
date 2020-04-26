@@ -1,0 +1,57 @@
+@import "src/variables";
+.profile{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.propic {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+}
+
+.name {
+  margin-top: 16px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 24px;
+  color: $accent;
+}
+
+.nickname {
+  font-size: 18px;
+
+}
+
+.header-text {
+  font-family: 'Montserrat', sans-serif;
+  color: $accent;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.data {
+  color: $primary;
+  text-align: right;
+  margin-bottom: 5px;
+}
+.vehicle {
+  color: $primary;
+  text-align: right;
+}
+
+.vehicle-title {
+  display: flex;
+  align-items: center;
+  color: $accent;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+

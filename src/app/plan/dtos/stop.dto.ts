@@ -7,4 +7,8 @@ export class StopsDto {
   time: string;
   dest: string;
   id: number[];
+  packageUp:number;
+  packageDown:number;
+  peopleUp:number;
+  peopleDown:number;
 }

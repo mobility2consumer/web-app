@@ -1,0 +1,32 @@
+<div class="container main-topic">
+  <div class="text-container">
+    <h1>SOAP Results</h1>
+  </div>
+
+  <mat-card class="main-content stores-container">
+
+    <div class="header-text">Here it is the safest and optimal choice for your strategy</div>
+  </mat-card>
+  <mat-card class="main-content stores-container" *ngFor="let a of vehicle; let j = index">
+    <h1 class="data">April {{27 + j}}th, 2020</h1>
+    <h2 class="vehicle">Vehicle Needed: {{a}}</h2>
+    <div class="vehicle-details" *ngFor="let v of getArray(a); let i = index">
+      <div class="vehicle-title">Vehicle {{i + 1}} <a href="https://goo.gl/maps/DNpB5zj4HZ6CUijk9"><button mat-icon-button color="primary"><mat-icon>swap_horizontal_circle</mat-icon></button></a></div>
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m66!1m8!1m3!1d75792.46889756067!2d7.893219561342232!3d44.67744943734485!3m2!1i1024!2i768!4f13.1!4m55!3e0!4m5!1s0x12d2b312d4fb39fd%3A0x1bf50e1bd9f0dcf!2sCorso%20Piave%2C%2058%2C%2012051%20Alba%2C%20CN!3m2!1d44.692501899999996!2d8.0244875!4m5!1s0x12d2b36c70dcf001%3A0x6808bcead6624c20!2sCorso%20Piave%2C%2031%2C%2012051%20Alba%20CN!3m2!1d44.6938703!2d8.0285992!4m5!1s0x12d2b36966c6cf85%3A0x8b6d320b73abf215!2sCorso%20Europa%2C%203%2C%2012051%20Alba%2C%20CN!3m2!1d44.6957429!2d8.030556599999999!4m5!1s0x12d2b342d45c5807%3A0x850833188cf4a9b1!2sComune%20di%20Alba%2C%20Piazza%20Risorgimento%2C%201%2C%2012051%20Alba%2C%20CN!3m2!1d44.70072!2d8.0359!4m5!1s0x4787f602ada4fb9d%3A0xc0c881f008d013ab!2sCorso%20Asti%2C%2024%2C%20Alba%2C%20CN!3m2!1d44.7177812!2d8.0359528!4m3!3m2!1d44.713083999999995!2d8.020927499999999!4m3!3m2!1d44.6987236!2d7.9302744!4m5!1s0x12d2ab69a37a4301%3A0x1705ffdba65e8ca3!2sOspedale%20Santo%20Spirito%2C%20Via%20Vittorio%20Emanuele%20II%2C%20Bra%2C%20CN!3m2!1d44.7020006!2d7.847976699999999!4m5!1s0x12d2ab9efe79bde5%3A0xed21b85c0042c1b3!2sLidl!3m2!1d44.6890602!2d7.8532348999999995!4m3!3m2!1d44.6476025!2d7.8588249999999995!5e0!3m2!1sit!2sit!4v1587901759442!5m2!1sit!2sit"
+          width="100%" height="300px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+          tabindex="0"></iframe>
+      </div>
+      <div class="stops" *ngIf="(stops$ |async) as stops">
+        <app-stop-entry *ngFor="let s of stops" [stop]="s">
+        </app-stop-entry>
+
+      </div>
+    </div>
+
+  </mat-card>
+  <div ngClass.lt-md="blank-space"></div>
+
+</div>
+

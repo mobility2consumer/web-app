@@ -91,7 +91,11 @@ export class SoapService {
       address: "Corso Piave, 58, 12051 Alba CN",
       time: "4/30/2020 8:00",
       dest: "Corso Asti, 24, Alba CN",
-      id: [1]
+      id: [1],
+      packageUp: 4,
+      packageDown: 0,
+      peopleUp: 0,
+      peopleDown: 0,
     },
     {
       stops: 2,
@@ -101,7 +105,11 @@ export class SoapService {
       address: "Corso Piave, 31, 12051 Alba CN",
       time: "4/30/2020 8:00",
       dest: "Corso Asti, 24, Alba CN",
-      id: [2]
+      id: [2],
+      packageUp: 2,
+      packageDown: 0,
+      peopleUp: 0,
+      peopleDown: 0,
     },
     {
       stops: 3,
@@ -111,7 +119,11 @@ export class SoapService {
       address: "Corso Europa, 3, 12051 Alba CN",
       time: "4/30/2020 8:15",
       dest: "Comune di Alba, Piazza Risorgimento, 1, 12051 Alba CN",
-      id: []
+      id: [],
+      packageUp: 0,
+      packageDown: 0,
+      peopleUp: 2,
+      peopleDown: 0,
     },
     {
       stops: 4,
@@ -121,7 +133,11 @@ export class SoapService {
       address: "Comune di Alba, Piazza Risorgimento, 1, 12051 Alba CN",
       time: "",
       dest: "",
-      id: []
+      id: [],
+      packageUp: 0,
+      packageDown: 0,
+      peopleUp: 0,
+      peopleDown: 2,
     },
     {
       stops: 5,
@@ -131,7 +147,11 @@ export class SoapService {
       address: "Corso Asti, 24, Alba CN",
       time: "",
       dest: "",
-      id: [1, 2]
+      id: [1, 2],
+      packageUp: 0,
+      packageDown: 6,
+      peopleUp: 0,
+      peopleDown: 0,
     },
     {
       stops: 6,
@@ -141,7 +161,11 @@ export class SoapService {
       address: "Corso Canale, 28, 12051 Mussotto CN",
       time: "4/30/2020 8:30",
       dest: "Ospedale Santo Spirito, Via Vittorio Emanuele II, 3, 12042 Bra CN",
-      id: []
+      id: [],
+      packageUp: 0,
+      packageDown: 0,
+      peopleUp: 2,
+      peopleDown: 0,
     },
     {
       stops: 7,
@@ -151,7 +175,11 @@ export class SoapService {
       address: "SP153, 23, 12069 Pocapaglia CN",
       time: "4/30/2020 8:40",
       dest: "Ospedale Santo Spirito, Via Vittorio Emanuele II, 3, 12042 Bra CN",
-      id: []
+      id: [],
+      packageUp: 0,
+      packageDown: 0,
+      peopleUp: 1,
+      peopleDown: 0,
     },
     {
       stops: 8,
@@ -161,7 +189,11 @@ export class SoapService {
       address: "Ospedale Santo Spirito, Via Vittorio Emanuele II, 3, 12042 Bra CN",
       time: "",
       dest: "",
-      id: []
+      id: [],
+      packageUp: 0,
+      packageDown: 0,
+      peopleUp: 0,
+      peopleDown: 3,
     },
     {
       stops: 9,
@@ -171,7 +203,11 @@ export class SoapService {
       address: "Lidl, Corso IV Novembre, 50, 12042 Bra CN",
       time: "4/30/2020 9:00",
       dest: "Cherasco, 12062 CN",
-      id: [3]
+      id: [3],
+      packageUp: 4,
+      packageDown: 0,
+      peopleUp: 0,
+      peopleDown: 0,
     },
     {
       stops: 10,
@@ -181,7 +217,11 @@ export class SoapService {
       address: "Cherasco, 12062 CN",
       time: "",
       dest: "",
-      id: [3]
+      id: [3],
+      packageUp: 0,
+      packageDown: 4,
+      peopleUp: 0,
+      peopleDown: 0,
     }
   ]
 
