@@ -71,8 +71,7 @@ import {SoapComponent} from "./plan/soap/soap.component";
     DeliverStoreComponent,
     RentStoreComponent,
     StatComponent,
-    SoapComponent
-
+    SoapComponent,
   ],
   imports: [
     FlexLayoutModule,

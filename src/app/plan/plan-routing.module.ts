@@ -1,9 +1,9 @@
 import {RouterModule, Routes} from "@angular/router";
 import {NgModule} from "@angular/core";
 import {SoapComponent} from "./soap/soap.component";
-import {RentStoreComponent} from "./rent/rent-store.component";
 import {PlanComponent} from "./plan.component";
 import {StatComponent} from "./stat/stat.component";
+
 
 const routes: Routes = [
   {path: 'plan', component: PlanComponent},
