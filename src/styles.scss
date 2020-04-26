@@ -19,6 +19,13 @@ body {
   max-width: 1024px;
   margin: auto;
 }
+.full-width {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
 
 .main-content {
   margin: 16px;

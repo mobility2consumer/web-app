@@ -10,7 +10,7 @@ const routes: Routes = [
   {path: 'call', component: CallComponent},
   {path: 'call/transport', component: TransportCallComponent},
   {path: 'call/rent', component: RentCallComponent},
-  {path: 'call/deliver', component: DeliverCallComponent},
+  {path: 'call/soap', component: DeliverCallComponent},
   {path: 'call/store', component: StoresCallComponent},
 ];
 

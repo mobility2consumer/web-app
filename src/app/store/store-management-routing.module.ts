@@ -7,8 +7,8 @@ import {RentStoreComponent} from "./rent/rent-store.component";
 
 const routes: Routes = [
   {path: 'store', component: StoreManagementComponent},
-  {path: 'store/profile', component: ProfileStoreComponent},
-  {path: 'store/deliver', component: DeliverStoreComponent},
+  {path: 'store/stat', component: ProfileStoreComponent},
+  {path: 'store/soap', component: DeliverStoreComponent},
   {path: 'store/rent', component: RentStoreComponent}
 ];
 

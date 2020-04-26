@@ -1,5 +1,6 @@
 <div class="container main-topic">
-  <app-header-image [image]="'assets/img/hand.jpg'" title="Planning Interface"
-                    [subtitle]="'Work in progress!'">
-  </app-header-image>
+
+  <app-button-choice *ngIf="(this.choices | async) as answers" [answers]="answers"
+                     [question]="'Select the product:'"></app-button-choice>
+  <div ngClass.lt-md="blank-space"></div>
 </div>

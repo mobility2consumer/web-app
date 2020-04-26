@@ -49,17 +49,33 @@ export class NavbarService {
   profile = {
     icon: 'account_circle',
     text: 'Profile',
-    link: '/user/profile'
+    link: '/user/stat'
   }
   profileStore = {
     icon: 'store',
     text: 'Profile',
-    link: '/store/profile'
+    link: '/store/stat'
   }
   space = {
     icon: '',
     text: '',
     link: ''
+  }
+  stat = {
+    icon: 'timeline',
+    text: 'Statistics',
+    link: '/plan/statistics'
+  }
+
+  addPlan = {
+    icon: 'control_camera',
+    text: 'Control Panel',
+    link: '/plan'
+  }
+  soap = {
+    icon: 'bar_chart',
+    text: 'SOAP',
+    link: '/plan/soap'
   }
 
   navbarSubject = new BehaviorSubject([]);
@@ -99,6 +115,12 @@ export class NavbarService {
         break;
       case 'store':
         menus.push(this.home, this.addStore, this.profileStore)
+        console.log(menus)
+        this.navbarSubject.next(menus)
+        this.callSubject.next(true);
+        break;
+      case 'plan':
+        menus.push(this.home, this.addPlan, this.soap, this.stat)
         console.log(menus)
         this.navbarSubject.next(menus)
         this.callSubject.next(true);

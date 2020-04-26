@@ -20,7 +20,7 @@ export class StoreManagementService {
       title: 'Deliver',
       subtitle: 'Deliver a package for a store!',
       color: '#F44336',
-      link: '/call/deliver'
+      link: '/call/soap'
     }
   ]
 

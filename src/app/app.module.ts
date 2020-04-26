@@ -26,11 +26,11 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatNativeDateModule} from "@angular/material/core";
-import { OrdersComponent } from './user/orders/orders.component';
+import {OrdersComponent} from './user/orders/orders.component';
 import {TransportToMeComponent} from "./user/transport-to-me/transport-to-me.component";
 import {RentComponent} from "./user/rent/rent.component";
 import {MatRadioModule} from "@angular/material/radio";
-import { ProfileComponent } from './user/profile/profile.component';
+import {ProfileComponent} from './user/profile/profile.component';
 import {PlanRoutingModule} from "./plan/plan-routing.module";
 import {CallRoutingModule} from "./call/call-routing.module";
 import {StoreManagementComponent} from "./store/store-management.component";
@@ -43,6 +43,8 @@ import {DeliverStoreComponent} from "./store/deliver/deliver-store.component";
 import {ProfileStoreComponent} from "./store/profile/profile-store.component";
 import {StoreManagementRouting} from "./store/store-management-routing.module";
 import {RentStoreComponent} from "./store/rent/rent-store.component";
+import {StatComponent} from "./plan/stat/stat.component";
+import {SoapComponent} from "./plan/soap/soap.component";
 
 @NgModule({
   declarations: [
@@ -67,7 +69,9 @@ import {RentStoreComponent} from "./store/rent/rent-store.component";
     StoresCallComponent,
     ProfileStoreComponent,
     DeliverStoreComponent,
-    RentStoreComponent
+    RentStoreComponent,
+    StatComponent,
+    SoapComponent
 
   ],
   imports: [
@@ -92,7 +96,8 @@ import {RentStoreComponent} from "./store/rent/rent-store.component";
     PlanRoutingModule,
     CallRoutingModule,
     StoreManagementRouting,
-    MatSelectModule
+    MatSelectModule,
+    PlanRoutingModule
   ],
   providers: [
     MatDatepickerModule

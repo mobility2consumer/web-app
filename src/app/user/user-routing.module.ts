@@ -15,7 +15,7 @@ const routes: Routes = [
   {path: 'user/request-transport-to-me', component: TransportToMeComponent},
   {path: 'user/rent', component: RentComponent},
   {path: 'user/orders', component: OrdersComponent},
-  {path: 'user/profile', component: ProfileComponent},
+  {path: 'user/stat', component: ProfileComponent},
 ];
 
 // configures NgModule imports and exports
