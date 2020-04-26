@@ -50,7 +50,7 @@
               class="example-radio-group"
               [(ngModel)]="favoriteSeason"
               formControlName="rentObject">
-              <mat-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
+              <mat-radio-button class="example-radio-button" *ngFor="let season of rents" [value]="season">
                 {{season}}
               </mat-radio-button>
             </mat-radio-group>
@@ -61,10 +61,32 @@
           </div>
         </form>
       </mat-step>
+      <mat-step [stepControl]="detailsFormGroup">
+        <form [formGroup]="detailsFormGroup">
+          <ng-template matStepLabel>When do you need the service</ng-template>
+          <div class="form-row">
+            <mat-form-field appearance="fill">
+              <mat-label>Date</mat-label>
+              <input matInput [matDatepicker]="picker3" placeholder="Date" formControlName="date">
+              <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+              <mat-datepicker #picker3></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <div class="form-row">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Hour</mat-label>
+              <input matInput placeholder="Hour" value="00:00" formControlName="clock">
+            </mat-form-field>
+          </div>
+          <div>
+            <button mat-raised-button matStepperNext color="accent">Next</button>
+          </div>
+        </form>
+      </mat-step>
       <mat-step [stepControl]="secondFormGroup">
         <form [formGroup]="secondFormGroup" (load)="initialize_map()">
           <ng-template matStepLabel>Select the delivery point</ng-template>
-          <h2>Pick-Up point</h2>
+          <h2>Delivery point</h2>
           <div id="map-start" class="map"></div>
           <div style="margin-top: 8px">
             <button mat-raised-button matStepperPrevious color="accent" style="margin-right: 8px">Back</button>
@@ -72,6 +94,7 @@
           </div>
         </form>
       </mat-step>
+
       <mat-step>
         <ng-template matStepLabel>Confirm your order</ng-template>
         <a [routerLink]="['/user/orders']">

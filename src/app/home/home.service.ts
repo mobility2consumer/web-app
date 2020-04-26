@@ -11,14 +11,14 @@ export class HomeService {
     {
       image: 'assets/icons/user.svg',
       title: 'User',
-      subtitle: 'Discover affiliated shops and book journeys',
+      subtitle: 'Book your transport product and discover affiliated shops',
       color: '#4CAF50',
       link: '/user'
     },
     {
       image: 'assets/icons/call.svg',
       title: 'Receptionist',
-      subtitle: 'Book journeys for a user calling',
+      subtitle: 'Book a transport product for a calling user',
       color: '#00BCD4',
       link: '/call'
 
@@ -32,7 +32,7 @@ export class HomeService {
     },
     {
       image: 'assets/icons/bus.svg',
-      title: 'PT Planner',
+      title: 'PT Operator',
       subtitle: 'Analyse requests, DSS and planning',
       color: '#FF9800',
       link: '/plan'

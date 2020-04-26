@@ -5,31 +5,30 @@ import {AnswerDto} from "./dtos/answer.dto";
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
+export class CallService {
 
   answers = [
     {
       image: 'assets/icons/bus.svg',
-      title: 'Transport me!',
-      subtitle: 'Transport me everywhere!',
+      title: 'Transport',
+      subtitle: 'Transport someone wherever!',
       color: '#4CAF50',
-      link: '/user/request-transport'
-    },
-    {
-
-      image: 'assets/icons/bus.svg',
-      title: 'Transport to me!',
-      subtitle: 'Transport somebody to me!',
-      color: '#00BCD4',
-      link: '/user/request-transport-to-me'
-
+      link: '/call/transport'
     },
     {
       image: 'assets/icons/bike.svg',
-      title: 'Rent\'n\'Ride!',
+      title: 'Rent',
       subtitle: 'Rent a vehicle for a period of time!',
       color: '#F44336',
-      link: '/user/rent'
+      link: '/call/rent'
+    }
+    ,
+    {
+      image: 'assets/icons/store.svg',
+      title: 'Deliver',
+      subtitle: 'Deliver a package for a store!',
+      color: '#F44336',
+      link: '/call/deliver'
     }
   ]
 

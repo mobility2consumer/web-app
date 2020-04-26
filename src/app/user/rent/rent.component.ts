@@ -19,8 +19,9 @@ export class RentComponent implements OnInit, AfterViewInit {
   map_start: mapboxgl.Map;
   map_start_geo: any;
   thirdFormGroup: FormGroup;
-  seasons: string[] = ['Bike', 'e-Bike', 'Cargo Bike', '...'];
+  rents: string[] = ['Bike', 'e-Bike', 'Cargo Bike', 'Scooter', 'e-Scooter', 'Car', 'Vehicle'];
   favoriteSeason: string;
+  detailsFormGroup: FormGroup;
 
   constructor(private _formBuilder: FormBuilder, private navbarService: NavbarService) {
   }
@@ -38,6 +39,10 @@ export class RentComponent implements OnInit, AfterViewInit {
     this.secondFormGroup = this._formBuilder.group({});
     this.thirdFormGroup = this._formBuilder.group({
       rentObject: ['', Validators.required],
+    });
+    this.detailsFormGroup = this._formBuilder.group({
+      date: ['', Validators.required],
+      clock: ['', Validators.required]
     });
     mapboxgl.accessToken = environment.mapbox_token;
   }

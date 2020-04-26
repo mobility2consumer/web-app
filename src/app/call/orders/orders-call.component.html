@@ -1,0 +1,37 @@
+<div class="container main-topic">
+  <div class="text-container">
+    <h1>List of Orders</h1>
+  </div>
+
+  <mat-card class="main-content stores-container">
+    <div class="stores-list" *ngIf="(this.orders | async) as orders">
+      <div class="store-element" *ngFor="let o of orders">
+        <div class="logo-mobile" ngClass.gt-sm="logo" style="flex:1">
+          <img *ngIf="o.type === 'Transport'" [src]="'assets/icons/bus-color.svg'" [alt]="o.name + ' image'">
+          <img *ngIf="o.type === 'Rent'" [src]="'assets/icons/bike-color.svg'" [alt]="o.name + ' image'">
+
+        </div>
+        <div class="text-section-order" style="flex:5">
+        <div class="title-mobile" ngClass.gt-sm="title">{{o.name}}         <span class="subtitle-mobile" ngClass.gt-sm="subtitle"> ({{o.type}})</span>
+        </div>
+        <div class="text-icon-mobile" ngClass.gt-sm="text-icon">Approved:
+          <mat-icon *ngIf="o.approved" color="primary">check</mat-icon>
+          <mat-icon *ngIf="!o.approved" color="warn">clear</mat-icon></div>
+        <div class="text-icon-mobile" ngClass.gt-sm="text-icon">Paid:
+          <mat-icon *ngIf="o.paid" color="primary">check</mat-icon>
+          <mat-icon *ngIf="!o.paid" color="warn">clear</mat-icon></div>
+        </div>
+        <div class="text-section-order" style="flex:1">
+          <div class="text-icon-mobile" ngClass.gt-sm="text-icon">
+            <button mat-flat-button color="accent">Details</button>
+          </div>
+        </div>
+
+
+        </div>
+    </div>
+  </mat-card>
+  <div ngClass.lt-md="blank-space"></div>
+
+</div>
+

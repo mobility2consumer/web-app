@@ -9,10 +9,10 @@ import {NavbarService} from "../../navbar/navbar.service";
 
 @Component({
   selector: 'app-transport',
-  templateUrl: './transport.component.html',
-  styleUrls: ['./transport.component.scss']
+  templateUrl: './transport-call.component.html',
+  styleUrls: ['./transport-call.component.scss']
 })
-export class TransportComponent implements OnInit, AfterViewInit {
+export class TransportCallComponent implements OnInit, AfterViewInit {
 
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
@@ -20,7 +20,6 @@ export class TransportComponent implements OnInit, AfterViewInit {
   map_dest: mapboxgl.Map;
   map_start_geo: any;
   map_dest_geo: any;
-  detailsFormGroup: FormGroup;
 
   constructor(private _formBuilder: FormBuilder, private navbarService: NavbarService) {
   }
@@ -32,15 +31,10 @@ export class TransportComponent implements OnInit, AfterViewInit {
       lastName: ['', Validators.required],
       email: ['', Validators.required],
       birthday: ['', Validators.required],
-      people: ['', Validators.required],
       phone: ['', Validators.required]
     });
     this.secondFormGroup = this._formBuilder.group({
       secondCtrl: ['', Validators.required]
-    });
-    this.detailsFormGroup = this._formBuilder.group({
-      date: ['', Validators.required],
-      clock: ['', Validators.required]
     });
     mapboxgl.accessToken = environment.mapbox_token;
   }

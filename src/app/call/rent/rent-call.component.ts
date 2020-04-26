@@ -9,18 +9,18 @@ import {NavbarService} from "../../navbar/navbar.service";
 
 @Component({
   selector: 'app-transport',
-  templateUrl: './transport.component.html',
-  styleUrls: ['./transport.component.scss']
+  templateUrl: './rent-call.component.html',
+  styleUrls: ['./rent-call.component.scss']
 })
-export class TransportComponent implements OnInit, AfterViewInit {
+export class RentCallComponent implements OnInit, AfterViewInit {
 
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
   map_start: mapboxgl.Map;
-  map_dest: mapboxgl.Map;
   map_start_geo: any;
-  map_dest_geo: any;
-  detailsFormGroup: FormGroup;
+  thirdFormGroup: FormGroup;
+  seasons: string[] = ['Bike', 'e-Bike', 'Cargo Bike', '...'];
+  favoriteSeason: string;
 
   constructor(private _formBuilder: FormBuilder, private navbarService: NavbarService) {
   }
@@ -32,15 +32,12 @@ export class TransportComponent implements OnInit, AfterViewInit {
       lastName: ['', Validators.required],
       email: ['', Validators.required],
       birthday: ['', Validators.required],
-      people: ['', Validators.required],
       phone: ['', Validators.required]
+
     });
-    this.secondFormGroup = this._formBuilder.group({
-      secondCtrl: ['', Validators.required]
-    });
-    this.detailsFormGroup = this._formBuilder.group({
-      date: ['', Validators.required],
-      clock: ['', Validators.required]
+    this.secondFormGroup = this._formBuilder.group({});
+    this.thirdFormGroup = this._formBuilder.group({
+      rentObject: ['', Validators.required],
     });
     mapboxgl.accessToken = environment.mapbox_token;
   }
@@ -53,28 +50,13 @@ export class TransportComponent implements OnInit, AfterViewInit {
       center: {lat: 45.0735, lng: 7.6757},
       zoom: 12
     });
-    this.map_dest = new mapboxgl.Map({
-      container: 'map-dest',
-      style: 'mapbox://styles/mapbox/streets-v11',
-      center: {lat: 45.0735, lng: 7.6757},
-      zoom: 12
-    });
-    this.map_start_geo =  new MapboxGeocoder({
-      accessToken: mapboxgl.accessToken,
-      mapboxgl: mapboxgl
-
-    });
-    this.map_dest_geo =  new MapboxGeocoder({
+    this.map_start_geo = new MapboxGeocoder({
       accessToken: mapboxgl.accessToken,
       mapboxgl: mapboxgl
 
     });
     this.map_start.addControl(
       this.map_start_geo
-    );
-    this.map_start.get
-    this.map_dest.addControl(
-      this.map_dest_geo
     );
   }
 

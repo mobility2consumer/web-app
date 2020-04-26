@@ -1,28 +1,27 @@
-@import "src/variables";
-.choice-card-mobile {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+@import 'src/variables';
+
+.stores-container h2 {
+  font-weight: bold;
+  color: $accent;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 22px;
 }
 
-.choice-card {
-}
-
-.answers {
+.stores-list {
   flex-wrap: wrap;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 
-.answers img {
-    width: 70%;
-    height: auto;
+.stores-list img {
+  width: 70%;
+  height: auto;
 }
 
-.answer {
+.store-element {
   min-width: 100px;
-  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,15 +29,11 @@
   margin: 24px 24px
 }
 
-.answer:hover {
-  opacity: 0.7;
-}
-
 
 .question {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
-  margin-bottom: 8px !important;
+  margin-bottom: 24px !important;
   text-align: center;
   color: $primary;
 }
@@ -46,12 +41,14 @@
 .title-mobile {
   font-weight: bold;
   line-height: 1.5;
-  font-size: 20px;
+  font-size: 18px;
   position: relative;
   bottom: 0;
   left: 0;
   text-align: center;
+  color: $primary;
 }
+
 .subtitle-mobile {
   font-size: 12px;
   position: relative;
@@ -63,11 +60,12 @@
 .title {
   font-size: 24px;
 }
+
 .subtitle {
   font-size: 14px;
 }
 
-.icon-mobile {
+.logo-mobile {
   user-select: none;
   display: flex;
   justify-content: space-around;
@@ -76,7 +74,20 @@
   border-radius: 50%;
 }
 
-.icon {
+.logo {
   width: 100px;
   height: 100px;
+}
+
+.phone-mobile {
+  font-weight: bold;
+}
+
+.button-part {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.store-element button {
+  color: $accent;
 }

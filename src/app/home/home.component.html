@@ -1,10 +1,10 @@
 <div class="container main-topic">
-  <app-header-image [image]="'assets/img/hand.jpg'" title="Mobility2Consumer"
+  <app-header-image [image]="'assets/img/mani.jpg'" title="Mobility2Consumer"
                     [subtitle]="'The safest service to move you and everything you want'">
   </app-header-image>
 
   <app-button-choice *ngIf="(this.answers | async) as answers" [answers]="answers"
-                     [question]="'Select the interface to preview'"></app-button-choice>
+                     [question]="'Who are you?'"></app-button-choice>
   <mat-card class="main-content">
     <h1>Objective</h1>
     <p>

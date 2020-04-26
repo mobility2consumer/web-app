@@ -35,6 +35,11 @@ import {PlanRoutingModule} from "./plan/plan-routing.module";
 import {CallRoutingModule} from "./call/call-routing.module";
 import {StoreRoutingModule} from "./store/store-routing.module";
 import {StoreManagementComponent} from "./store/store-management.component";
+import {TransportCallComponent} from "./call/transport/transport-call.component";
+import {StoresCallComponent} from "./call/stores/stores-call.component";
+import {RentCallComponent} from "./call/rent/rent-call.component";
+import {OrdersCallComponent} from "./call/orders/orders-call.component";
+import {MatSelectModule} from "@angular/material/select";
 
 @NgModule({
   declarations: [
@@ -52,7 +57,12 @@ import {StoreManagementComponent} from "./store/store-management.component";
     TransportToMeComponent,
     RentComponent,
     ProfileComponent,
-    StoreManagementComponent
+    StoreManagementComponent,
+    TransportCallComponent,
+    OrdersCallComponent,
+    RentCallComponent,
+    StoresCallComponent
+
   ],
   imports: [
     FlexLayoutModule,
@@ -75,7 +85,8 @@ import {StoreManagementComponent} from "./store/store-management.component";
     FormsModule,
     PlanRoutingModule,
     CallRoutingModule,
-    StoreRoutingModule
+    StoreRoutingModule,
+    MatSelectModule
   ],
   providers: [
     MatDatepickerModule

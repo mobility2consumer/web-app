@@ -1,18 +1,12 @@
 <div class="container main-topic">
   <div class="text-container">
-    <h1>Book your journey</h1>
+    <h1>Rent</h1>
   </div>
   <mat-card class="main-content stores-container">
     <mat-vertical-stepper [linear]="false" #stepper>
       <mat-step [stepControl]="firstFormGroup">
         <form [formGroup]="firstFormGroup">
-          <ng-template matStepLabel>Let us know who are you!</ng-template>
-          <div class="form-row" style="margin-bottom: 16px;">
-            Do you have already an account?
-            <button mat-raised-button color="primary" style="margin-left: 16px">Sign-In</button>
-            <button mat-raised-button color="accent" style="margin-left: 16px">Sign-Up</button>
-
-          </div>
+          <ng-template matStepLabel>Let us know who will rent the product!</ng-template>
           <div class="form-row">
             <mat-form-field appearance="fill">
               <mat-label>First Name</mat-label>
@@ -36,13 +30,9 @@
           <div class="form-row">
             <mat-form-field appearance="fill">
               <mat-label>Birthday</mat-label>
-              <input matInput [matDatepicker]="picker2" placeholder="Birthday" formControlName="birthday">
-              <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
-              <mat-datepicker #picker2></mat-datepicker>
-            </mat-form-field>
-            <mat-form-field class="example-full-width" appearance="fill">
-              <mat-label>Number of People</mat-label>
-              <input matInput placeholder="1, 2, 3,...." formControlName="people">
+              <input matInput [matDatepicker]="picker" placeholder="Birthday" formControlName="birthday">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
           </div>
           <div>
@@ -50,23 +40,22 @@
           </div>
         </form>
       </mat-step>
-      <mat-step [stepControl]="detailsFormGroup">
-        <form [formGroup]="detailsFormGroup">
-          <ng-template matStepLabel>When do you need the service</ng-template>
+      <mat-step [stepControl]="thirdFormGroup">
+        <form [formGroup]="thirdFormGroup">
+          <ng-template matStepLabel>What do you want to rent?</ng-template>
+          <h2>Pick your selection:</h2>
           <div class="form-row">
-            <mat-form-field appearance="fill">
-              <mat-label>Date</mat-label>
-              <input matInput [matDatepicker]="picker" placeholder="Date" formControlName="date">
-              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-              <mat-datepicker #picker></mat-datepicker>
-            </mat-form-field>
+            <mat-radio-group
+              aria-labelledby="example-radio-group-label"
+              class="example-radio-group"
+              [(ngModel)]="favoriteSeason"
+              formControlName="rentObject">
+              <mat-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
+                {{season}}
+              </mat-radio-button>
+            </mat-radio-group>
           </div>
-          <div class="form-row">
-            <mat-form-field class="example-full-width" appearance="fill">
-              <mat-label>Hour</mat-label>
-              <input matInput placeholder="Hour" value="00:00" formControlName="clock">
-            </mat-form-field>
-          </div>
+          <div style="margin: 8px auto">Product Selected: {{favoriteSeason}}</div>
           <div>
             <button mat-raised-button matStepperNext color="accent">Next</button>
           </div>
@@ -74,11 +63,9 @@
       </mat-step>
       <mat-step [stepControl]="secondFormGroup">
         <form [formGroup]="secondFormGroup" (load)="initialize_map()">
-          <ng-template matStepLabel>Let us know the details of your journey</ng-template>
-          <h2>Starting point</h2>
+          <ng-template matStepLabel>Select the delivery point</ng-template>
+          <h2>Delivery point</h2>
           <div id="map-start" class="map"></div>
-          <h2 style="margin-top: 16px">Destination point</h2>
-          <div id="map-dest" class="map"></div>
           <div style="margin-top: 8px">
             <button mat-raised-button matStepperPrevious color="accent" style="margin-right: 8px">Back</button>
             <button mat-raised-button matStepperNext color="accent">Next</button>

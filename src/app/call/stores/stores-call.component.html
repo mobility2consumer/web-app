@@ -1,0 +1,55 @@
+<div class="container main-topic">
+  <div class="text-container">
+    <h1>Affiliated Stores</h1>
+  </div>
+  <mat-card class="main-content stores-container">
+    <h2>Groceries</h2>
+    <div class="stores-list" *ngIf="(this.stores | async) as stores">
+      <div class="store-element" *ngFor="let s of stores">
+        <div class="logo-mobile" ngClass.gt-sm="logo" [style.background-color]="s.color">
+          <img [src]="s.image" [alt]="s.title + ' image'">
+        </div>
+        <div class="title-mobile" ngClass.gt-sm="title">{{s.title}}</div>
+        <div class="button-part">
+
+          <button mat-icon-button>
+            <mat-icon>call</mat-icon>
+          </button>
+          <button mat-icon-button>
+            <mat-icon>mail</mat-icon>
+          </button>
+          <button mat-icon-button>
+            <mat-icon>link</mat-icon>
+          </button>
+        </div>
+        <div class="subtitle-mobile" ngClass.gt-sm="subtitle">{{s.subtitle}}</div>
+
+      </div>
+    </div>
+    <h2>Pharmacies</h2>
+    <div class="stores-list" *ngIf="(this.pharma | async) as stores">
+      <div class="store-element" *ngFor="let s of stores">
+        <div class="logo-mobile" ngClass.gt-sm="logo" [style.background-color]="s.color">
+          <img [src]="'assets/icons/pharma.svg'" [alt]="s.title + ' image'">
+        </div>
+        <div class="title-mobile" ngClass.gt-sm="title">{{s.title}}</div>
+        <div class="button-part">
+
+          <button mat-icon-button>
+            <mat-icon>call</mat-icon>
+          </button>
+          <button mat-icon-button>
+            <mat-icon>mail</mat-icon>
+          </button>
+          <button mat-icon-button>
+            <mat-icon>link</mat-icon>
+          </button>
+        </div>
+        <div class="subtitle-mobile" ngClass.gt-sm="subtitle">{{s.subtitle}}</div>
+
+      </div>
+    </div>
+  </mat-card>
+  <div ngClass.lt-md="blank-space"></div>
+
+</div>

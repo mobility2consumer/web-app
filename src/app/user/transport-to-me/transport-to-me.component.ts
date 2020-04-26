@@ -21,6 +21,7 @@ export class TransportToMeComponent implements OnInit, AfterViewInit {
   map_dest: mapboxgl.Map;
   map_start_geo: any;
   map_dest_geo: any;
+  detailsFormGroup: FormGroup;
 
   constructor(private _formBuilder: FormBuilder, private navbarService: NavbarService) {
   }
@@ -32,10 +33,15 @@ export class TransportToMeComponent implements OnInit, AfterViewInit {
       lastName: ['', Validators.required],
       email: ['', Validators.required],
       birthday: ['', Validators.required],
+      people: ['', Validators.required],
       phone: ['', Validators.required]
     });
     this.secondFormGroup = this._formBuilder.group({
       secondCtrl: ['', Validators.required]
+    });
+    this.detailsFormGroup = this._formBuilder.group({
+      date: ['', Validators.required],
+      clock: ['', Validators.required]
     });
     mapboxgl.accessToken = environment.mapbox_token;
   }
