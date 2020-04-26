@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StoreManagementComponent } from './store-management.component';
+import { ProfileStoreComponent } from './profile-store.component';
 
-describe('CallComponent', () => {
-  let component: StoreManagementComponent;
-  let fixture: ComponentFixture<StoreManagementComponent>;
+describe('ProfileComponent', () => {
+  let component: ProfileStoreComponent;
+  let fixture: ComponentFixture<ProfileStoreComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ StoreManagementComponent ]
+      declarations: [ ProfileStoreComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(StoreManagementComponent);
+    fixture = TestBed.createComponent(ProfileStoreComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

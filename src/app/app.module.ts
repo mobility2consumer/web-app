@@ -33,13 +33,16 @@ import {MatRadioModule} from "@angular/material/radio";
 import { ProfileComponent } from './user/profile/profile.component';
 import {PlanRoutingModule} from "./plan/plan-routing.module";
 import {CallRoutingModule} from "./call/call-routing.module";
-import {StoreRoutingModule} from "./store/store-routing.module";
 import {StoreManagementComponent} from "./store/store-management.component";
 import {TransportCallComponent} from "./call/transport/transport-call.component";
 import {StoresCallComponent} from "./call/stores/stores-call.component";
 import {RentCallComponent} from "./call/rent/rent-call.component";
 import {MatSelectModule} from "@angular/material/select";
 import {DeliverCallComponent} from "./call/deliver/deliver-call.component";
+import {DeliverStoreComponent} from "./store/deliver/deliver-store.component";
+import {ProfileStoreComponent} from "./store/profile/profile-store.component";
+import {StoreManagementRouting} from "./store/store-management-routing.module";
+import {RentStoreComponent} from "./store/rent/rent-store.component";
 
 @NgModule({
   declarations: [
@@ -61,7 +64,10 @@ import {DeliverCallComponent} from "./call/deliver/deliver-call.component";
     TransportCallComponent,
     RentCallComponent,
     DeliverCallComponent,
-    StoresCallComponent
+    StoresCallComponent,
+    ProfileStoreComponent,
+    DeliverStoreComponent,
+    RentStoreComponent
 
   ],
   imports: [
@@ -85,7 +91,7 @@ import {DeliverCallComponent} from "./call/deliver/deliver-call.component";
     FormsModule,
     PlanRoutingModule,
     CallRoutingModule,
-    StoreRoutingModule,
+    StoreManagementRouting,
     MatSelectModule
   ],
   providers: [

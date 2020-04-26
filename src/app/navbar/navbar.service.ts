@@ -26,6 +26,11 @@ export class NavbarService {
     text: 'Request a service',
     link: '/call'
   }
+  addStore = {
+    icon: 'add',
+    text: 'Request a service',
+    link: '/store'
+  }
   storeCall = {
     icon: 'store',
     text: 'Affiliated Stores',
@@ -45,6 +50,11 @@ export class NavbarService {
     icon: 'account_circle',
     text: 'Profile',
     link: '/user/profile'
+  }
+  profileStore = {
+    icon: 'store',
+    text: 'Profile',
+    link: '/store/profile'
   }
   space = {
     icon: '',
@@ -83,6 +93,12 @@ export class NavbarService {
         break;
       case 'call':
         menus.push(this.home, this.addCall, this.storeCall)
+        console.log(menus)
+        this.navbarSubject.next(menus)
+        this.callSubject.next(true);
+        break;
+      case 'store':
+        menus.push(this.home, this.addStore, this.profileStore)
         console.log(menus)
         this.navbarSubject.next(menus)
         this.callSubject.next(true);

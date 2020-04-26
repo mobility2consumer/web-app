@@ -1,5 +1,11 @@
-stores<div class="container main-topic">
-  <app-header-image [image]="'assets/img/hand.jpg'" title="Store Interface"
-                    [subtitle]="'Work in progress!'">
-  </app-header-image>
+<div class="container main-topic">
+  <div class="text-container">
+    <h1>Store Interface</h1>
+  </div>
+
+  <app-button-choice *ngIf="(this.choice | async) as answers" [answers]="answers"
+                     [question]="'Select the product:'"></app-button-choice>
+  <div ngClass.lt-md="blank-space"></div>
+
 </div>
+
