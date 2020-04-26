@@ -9,18 +9,19 @@ import {NavbarService} from "../../navbar/navbar.service";
 
 @Component({
   selector: 'app-transport',
-  templateUrl: './rent-call.component.html',
-  styleUrls: ['./rent-call.component.scss']
+  templateUrl: './deliver-call.component.html',
+  styleUrls: ['./deliver-call.component.scss']
 })
-export class RentCallComponent implements OnInit, AfterViewInit {
+export class DeliverCallComponent implements OnInit, AfterViewInit {
 
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
   map_start: mapboxgl.Map;
+  map_dest: mapboxgl.Map;
   map_start_geo: any;
-  thirdFormGroup: FormGroup;
-  seasons: string[] = ['Bike', 'e-Bike', 'Cargo Bike', 'Scooter', 'e-Scooter', 'Car', 'Vehicle'];
-  favoriteSeason: string;
+  map_dest_geo: any;
+  detailsFormGroup: FormGroup;
+  deliverFormGroup: FormGroup;
 
   constructor(private _formBuilder: FormBuilder, private navbarService: NavbarService) {
   }
@@ -32,12 +33,19 @@ export class RentCallComponent implements OnInit, AfterViewInit {
       lastName: ['', Validators.required],
       email: ['', Validators.required],
       birthday: ['', Validators.required],
-      phone: ['', Validators.required]
-
+      phone: ['', Validators.required],
+      people: ['', Validators.required]
     });
-    this.secondFormGroup = this._formBuilder.group({});
-    this.thirdFormGroup = this._formBuilder.group({
-      rentObject: ['', Validators.required],
+    this.secondFormGroup = this._formBuilder.group({
+      secondCtrl: ['', Validators.required]
+    });
+    this.detailsFormGroup = this._formBuilder.group({
+      date: ['', Validators.required],
+      clock: ['', Validators.required]
+    });
+    this.deliverFormGroup = this._formBuilder.group({
+      number: ['', Validators.required],
+      clock: ['', Validators.required]
     });
     mapboxgl.accessToken = environment.mapbox_token;
   }
@@ -50,7 +58,18 @@ export class RentCallComponent implements OnInit, AfterViewInit {
       center: {lat: 44.699216, lng: 8.035332},
       zoom: 12
     });
+    this.map_dest = new mapboxgl.Map({
+      container: 'map-dest',
+      style: 'mapbox://styles/mapbox/streets-v11',
+      center: {lat: 44.699216, lng: 8.035332},
+      zoom: 12
+    });
     this.map_start_geo = new MapboxGeocoder({
+      accessToken: mapboxgl.accessToken,
+      mapboxgl: mapboxgl
+
+    });
+    this.map_dest_geo = new MapboxGeocoder({
       accessToken: mapboxgl.accessToken,
       mapboxgl: mapboxgl
 
@@ -58,10 +77,19 @@ export class RentCallComponent implements OnInit, AfterViewInit {
     this.map_start.addControl(
       this.map_start_geo
     );
+    this.map_start.get
+    this.map_dest.addControl(
+      this.map_dest_geo
+    );
   }
 
   ngAfterViewInit(): void {
     this.initialize_map();
 
+  }
+
+  getArrayDim(number: string) {
+    const x = + number;
+    return Array(x).fill(0)
   }
 }

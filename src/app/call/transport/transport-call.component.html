@@ -1,12 +1,16 @@
 <div class="container main-topic">
   <div class="text-container">
-    <h1>Book your journey</h1>
+    <h1>Transport</h1>
   </div>
   <mat-card class="main-content stores-container">
     <mat-vertical-stepper [linear]="false" #stepper>
       <mat-step [stepControl]="firstFormGroup">
         <form [formGroup]="firstFormGroup">
           <ng-template matStepLabel>Let us know who are you!</ng-template>
+          <div class="form-row" style="margin-bottom: 16px;">
+            Does he/she has already an account?
+            <button mat-raised-button color="primary" style="margin-left: 16px">Select User</button>
+          </div>
           <div class="form-row">
             <mat-form-field appearance="fill">
               <mat-label>First Name</mat-label>
@@ -34,6 +38,32 @@
               <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
               <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Number of People</mat-label>
+              <input matInput placeholder="1, 2, 3,...." formControlName="people">
+            </mat-form-field>
+          </div>
+          <div>
+            <button mat-raised-button matStepperNext color="accent">Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="detailsFormGroup">
+        <form [formGroup]="detailsFormGroup">
+          <ng-template matStepLabel>When do you need the service</ng-template>
+          <div class="form-row">
+            <mat-form-field appearance="fill">
+              <mat-label>Date</mat-label>
+              <input matInput [matDatepicker]="picker2" placeholder="Date" formControlName="date">
+              <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+              <mat-datepicker #picker2></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <div class="form-row">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Hour</mat-label>
+              <input matInput placeholder="Hour" value="00:00" formControlName="clock">
+            </mat-form-field>
           </div>
           <div>
             <button mat-raised-button matStepperNext color="accent">Next</button>
@@ -55,7 +85,7 @@
       </mat-step>
       <mat-step>
         <ng-template matStepLabel>Confirm your order</ng-template>
-        <a [routerLink]="['/user/orders']">
+        <a [routerLink]="['/call']">
           <button mat-raised-button color="primary" style="margin-right: 8px">Confirm and Pay</button>
         </a>
         <div style="margin-top: 8px">

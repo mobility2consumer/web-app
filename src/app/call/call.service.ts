@@ -19,7 +19,7 @@ export class CallService {
       image: 'assets/icons/bike.svg',
       title: 'Rent',
       subtitle: 'Rent a vehicle for a period of time!',
-      color: '#F44336',
+      color: '#00bcd4',
       link: '/call/rent'
     }
     ,

@@ -38,8 +38,8 @@ import {StoreManagementComponent} from "./store/store-management.component";
 import {TransportCallComponent} from "./call/transport/transport-call.component";
 import {StoresCallComponent} from "./call/stores/stores-call.component";
 import {RentCallComponent} from "./call/rent/rent-call.component";
-import {OrdersCallComponent} from "./call/orders/orders-call.component";
 import {MatSelectModule} from "@angular/material/select";
+import {DeliverCallComponent} from "./call/deliver/deliver-call.component";
 
 @NgModule({
   declarations: [
@@ -59,8 +59,8 @@ import {MatSelectModule} from "@angular/material/select";
     ProfileComponent,
     StoreManagementComponent,
     TransportCallComponent,
-    OrdersCallComponent,
     RentCallComponent,
+    DeliverCallComponent,
     StoresCallComponent
 
   ],

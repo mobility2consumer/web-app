@@ -52,7 +52,7 @@ export class RentComponent implements OnInit, AfterViewInit {
     this.map_start = new mapboxgl.Map({
       container: 'map-start',
       style: 'mapbox://styles/mapbox/streets-v11',
-      center: {lat: 45.0735, lng: 7.6757},
+      center: {lat: 44.699216, lng: 8.035332},
       zoom: 12
     });
     this.map_start_geo = new MapboxGeocoder({

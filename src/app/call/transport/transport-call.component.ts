@@ -20,21 +20,27 @@ export class TransportCallComponent implements OnInit, AfterViewInit {
   map_dest: mapboxgl.Map;
   map_start_geo: any;
   map_dest_geo: any;
+  detailsFormGroup: FormGroup;
 
   constructor(private _formBuilder: FormBuilder, private navbarService: NavbarService) {
   }
 
   ngOnInit(): void {
-    this.navbarService.update('user');
+    this.navbarService.update('call');
     this.firstFormGroup = this._formBuilder.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
       email: ['', Validators.required],
       birthday: ['', Validators.required],
-      phone: ['', Validators.required]
+      phone: ['', Validators.required],
+      people: ['', Validators.required]
     });
     this.secondFormGroup = this._formBuilder.group({
       secondCtrl: ['', Validators.required]
+    });
+    this.detailsFormGroup = this._formBuilder.group({
+      date: ['', Validators.required],
+      clock: ['', Validators.required]
     });
     mapboxgl.accessToken = environment.mapbox_token;
   }
@@ -44,21 +50,21 @@ export class TransportCallComponent implements OnInit, AfterViewInit {
     this.map_start = new mapboxgl.Map({
       container: 'map-start',
       style: 'mapbox://styles/mapbox/streets-v11',
-      center: {lat: 45.0735, lng: 7.6757},
+      center: {lat: 44.699216, lng: 8.035332},
       zoom: 12
     });
     this.map_dest = new mapboxgl.Map({
       container: 'map-dest',
       style: 'mapbox://styles/mapbox/streets-v11',
-      center: {lat: 45.0735, lng: 7.6757},
+      center: {lat: 44.699216, lng: 8.035332},
       zoom: 12
     });
-    this.map_start_geo =  new MapboxGeocoder({
+    this.map_start_geo = new MapboxGeocoder({
       accessToken: mapboxgl.accessToken,
       mapboxgl: mapboxgl
 
     });
-    this.map_dest_geo =  new MapboxGeocoder({
+    this.map_dest_geo = new MapboxGeocoder({
       accessToken: mapboxgl.accessToken,
       mapboxgl: mapboxgl
 

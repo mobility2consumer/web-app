@@ -6,7 +6,7 @@ import {StoreDto} from "../dtos/store.dto";
 @Injectable({
   providedIn: 'root'
 })
-export class StoresCallService {
+export class StoresService {
 
   stores = [
     {
