@@ -16,6 +16,11 @@ export class NavbarService {
     text: 'Orders',
     link: '/user/orders'
   }
+  journeysStore = {
+    icon: 'local_post_office',
+    text: 'Orders',
+    link: '/store/orders'
+  }
   add = {
     icon: 'add',
     text: 'Request a service',
@@ -114,7 +119,7 @@ export class NavbarService {
         this.callSubject.next(true);
         break;
       case 'store':
-        menus.push(this.home, this.addStore, this.profileStore)
+        menus.push(this.home, this.journeysStore, this.addStore, this.profileStore)
         console.log(menus)
         this.navbarSubject.next(menus)
         this.callSubject.next(true);

@@ -45,6 +45,9 @@ import {StoreManagementRouting} from "./store/store-management-routing.module";
 import {RentStoreComponent} from "./store/rent/rent-store.component";
 import {StatComponent} from "./plan/stat/stat.component";
 import {SoapComponent} from "./plan/soap/soap.component";
+import {OrdersStoreComponent} from "./store/orders/orders-store.component";
+import { UserEntryComponent } from './plan/soap/user-entry/user-entry.component';
+import { ShopEntryComponent } from './plan/soap/shop-entry/shop-entry.component';
 
 @NgModule({
   declarations: [
@@ -72,6 +75,9 @@ import {SoapComponent} from "./plan/soap/soap.component";
     RentStoreComponent,
     StatComponent,
     SoapComponent,
+    OrdersStoreComponent,
+    UserEntryComponent,
+    ShopEntryComponent
   ],
   imports: [
     FlexLayoutModule,

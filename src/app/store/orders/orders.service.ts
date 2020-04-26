@@ -11,7 +11,7 @@ export class OrdersService {
   orders = [
     {
       name: 'Order1',
-      type: 'Transport',
+      type: 'Deliver',
       date: 'April 27th, 2020 12:30',
       paid: true,
     },
@@ -23,7 +23,7 @@ export class OrdersService {
     },
     {
       name: 'Order3',
-      type: 'Transport',
+      type: 'Deliver',
       date: 'April 30th, 2020 9:00',
       paid: true,
     },

@@ -1,0 +1,39 @@
+@import "src/variables";
+
+.row-entry {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text-section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 8px 16px;
+  justify-content: space-between;
+  flex: 10;
+}
+
+.image {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.name {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  color: $primary
+}
+
+.phone {
+  font-weight: bold;
+  font-size: 14px;
+}

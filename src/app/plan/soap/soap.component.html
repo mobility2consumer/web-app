@@ -1,6 +1,30 @@
 <div class="container main-topic">
-  <app-header-image [image]="'assets/img/mani.jpg'" title="Soap Planning Interface"
-                    [subtitle]="'Work in progress!'">
-  </app-header-image>
+  <div class="text-container">
+    <h1>SOAP Analysis  - Orders to be planned</h1>
+  </div>
+
+  <mat-card class="main-content stores-container">
+    <h2>User Transportation
+      <hr>
+    </h2>
+    <div *ngIf="(users | async) as users">
+      <app-user-entry *ngFor="let u of users" [user]="u">
+      </app-user-entry>
+    </div>
+  </mat-card>
+  <mat-card class="main-content stores-container">
+
+    <h2>Store Deliveries
+      <hr>
+    </h2>
+    <div *ngIf="(shops | async) as shops">
+      <app-shop-entry *ngFor="let s of shops" [shop]="s">
+      </app-shop-entry>
+    </div>
+
+  </mat-card>
+  <button class="main-button-mobile" ngClass.gt-sm="main-button" mat-fab [matTooltip]="'Plan with SOAP!'">
+    <mat-icon>play_arrow</mat-icon>
+  </button>
   <div ngClass.lt-md="blank-space"></div>
 </div>

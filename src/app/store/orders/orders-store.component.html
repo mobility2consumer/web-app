@@ -7,7 +7,7 @@
     <div class="stores-list" *ngIf="(this.orders | async) as orders">
       <div class="store-element" *ngFor="let o of orders">
         <div class="logo-mobile" ngClass.gt-sm="logo" style="flex:1">
-          <img *ngIf="o.type === 'Transport'" [src]="'assets/icons/bus-color.svg'" [alt]="o.name + ' image'">
+          <img *ngIf="o.type === 'Deliver'" [src]="'assets/icons/package-color.svg'" [alt]="o.name + ' image'">
           <img *ngIf="o.type === 'Rent'" [src]="'assets/icons/bike-color.svg'" [alt]="o.name + ' image'">
 
         </div>

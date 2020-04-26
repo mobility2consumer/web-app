@@ -1,0 +1,11 @@
+stops,type,name,phone,address,time,dest,id
+1,Shop,Prestofresco,0173 441854,"Corso Piave, 58, 12051 Alba CN",4/30/2020 8:00,"Corso Asti, 24, Alba CN",1
+2,Shop,Ortobra Superfreschi Srl,0173 281258,"Corso Piave, 31, 12051 Alba CN",4/30/2020 8:00,"Corso Asti, 24, Alba CN",2
+3,User,User1,333-1111111,"Corso Europa, 3, 12051 Alba CN",4/30/2020 8:15,"Comune di Alba, Piazza Risorgimento, 1, 12051 Alba CN",
+4,User,User1,,"Comune di Alba, Piazza Risorgimento, 1, 12051 Alba CN",,,
+5,Shop,Delivery ID 0001 - 0002,333-2222222,"Corso Asti, 24, Alba CN",,,0002 - 0003
+6,User,User2,333-3333333,"Corso Canale, 28, 12051 Mussotto CN",4/30/2020 8:30,"Ospedale Santo Spirito, Via Vittorio Emanuele II, 3, 12042 Bra CN",
+7,User,User3,333-4444444,"SP153, 23, 12069 Pocapaglia CN",4/30/2020 8:40,"Ospedale Santo Spirito, Via Vittorio Emanuele II, 3, 12042 Bra CN",
+8,User,User2-User3,,"Ospedale Santo Spirito, Via Vittorio Emanuele II, 3, 12042 Bra CN",,,
+9,Shop,Lidl,0173 555555,"Lidl, Corso IV Novembre, 50, 12042 Bra CN",4/30/2020 9:00,"Cherasco, 12062 CN",3
+10,Shop,Delivery ID 0003,,"Cherasco, 12062 CN",,,3

@@ -1,0 +1,4 @@
+type,name,phone,address,time,dest,roundtrip,returnTime,returnDest
+User,User1,333-1111111,"Corso Europa, 3, 12051 Alba CN",4/30/2020 9:00,"Comune di Alba, Piazza Risorgimento, 1, 12051 Alba CN",NO,,
+User,User2,333-3333333,"Corso Canale, 28, 12051 Mussotto CN",4/30/2020 12:00,"Ospedale Santo Spirito, Via Vittorio Emanuele II, 3, 12042 Bra CN",NO,,
+User,User3,333-4444444,"SP153, 23, 12069 Pocapaglia CN",4/30/2020 15:00,"Ospedale Santo Spirito, Via Vittorio Emanuele II, 3, 12042 Bra CN",NO,,

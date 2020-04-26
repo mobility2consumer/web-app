@@ -1,0 +1,4 @@
+type,name,phone,address,time,dest,phoneDest,id
+Shop,Prestofresco,0173 441854,"Corso Piave, 58, 12051 Alba CN",4/30/2020 8:00,"Corso Asti, 24, Alba CN",333-2222222,1
+Shop,Ortobra Superfreschi Srl,0173 281258,"Corso Piave, 31, 12051 Alba CN",4/30/2020 8:00,"Corso Asti, 24, Alba CN",333-2222222,2
+Shop,Lidl,0173 555555,"Lidl, Corso IV Novembre, 50, 12042 Bra CN",4/30/2020 9:00,"Cherasco, 12062 CN",333-5555555,3

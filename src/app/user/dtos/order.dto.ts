@@ -1,6 +1,6 @@
 export class OrderDto {
   name: string;
   type: string;
-  approved: boolean;
+  date: string;
   paid: boolean;
 }

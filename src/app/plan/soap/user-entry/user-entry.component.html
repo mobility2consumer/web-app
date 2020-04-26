@@ -1,0 +1,17 @@
+<div class="row-entry">
+  <div class="image">
+    <img width="100px" [src]="user.img">
+  </div>
+  <div class="text-section">
+    <div class="name">{{user.name}}</div>
+    <div class="phone">{{user.phone}}</div>
+    <div class="roundtrip">
+      <span *ngIf="!user.roundtrip">One Way Trip</span>
+      <span *ngIf="user.roundtrip">Roundtrip</span>
+    </div>
+    <div class="time"><b>Datetime</b>: {{user.time}}</div>
+    <div class="start"><b>Departure Address</b>: {{user.address}}</div>
+    <div class="dest"><b>Destination Address</b>: {{user.dest}}</div>
+  </div>
+
+</div>
